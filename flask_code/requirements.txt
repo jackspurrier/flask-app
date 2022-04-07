@@ -11,3 +11,4 @@ requests==2.27.1
 QuantStats==0.0.50
 flask-migrate==3.1.0
 SQLAlchemy==1.4.35
+PyMySQL==1.0.2
