@@ -5,7 +5,7 @@ numpy==1.19.5
 flask-sqlalchemy==2.5.1
 empyrial==1.9.1
 DateTime==4.4
-ipython==8.2.0
+ipython==7.16.3
 importlib-metadata==4.11.3
 requests==2.27.1
 QuantStats==0.0.50
