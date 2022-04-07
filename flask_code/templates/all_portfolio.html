@@ -1,0 +1,74 @@
+{%extends 'base.html'%}
+{%block title%}get{%endblock%}
+{%block head%}{%endblock%}
+{%block body%}
+<div class="table">
+    <table class="serach_table" style="text-align: center;" border="2px" 
+
+    cellspacing="0px" margin="0 auto">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">ticker_1</th>
+                <th scope="col">ticker_2</th>
+                <th scope="col">ticker_3</th>
+                <th scope="col">diversity</th>
+                <th scope="col">start_date</th>
+                <th scope="col">portfolio_name</th>
+                <th scope="col">Annual_return</th>
+                <th scope="col">Cumulative_return</th>
+                <th scope="col">Annual_volatility</th>
+                <th scope="col">Winning_day_ratio</th>
+                <th scope="col">Sharpe_ratio</th>
+                <th scope="col">Calmar_ratio</th>
+                <th scope="col">Information_ratio</th>
+                <th scope="col">Stability</th>
+                <th scope="col">Max_Drawdown</th>
+                <th scope="col">Sortino_ratio</th>
+                <th scope="col">Skew</th>
+                <th scope="col">Kurtosis</th>
+                <th scope="col">Tail_Ratio</th>
+                <th scope="col">Common_sens_ratio</th>
+                <th scope="col">Daily_value_at_risk</th>
+            
+                <th scope="col">Alpha</th>
+                <th scope="col">Beta</th>
+            </tr>
+
+        </thead>
+        <tbody>
+        {%for po in portfolio%}
+        <tr>
+            <td>{{po.id}}</td>
+            <td>{{po.ticker_1}}</td>
+            <td>{{po.ticker_2}}</td>
+            <td>{{po.ticker_3}}</td>
+            <td>{{po.diversity}}</td>
+            <td>{{po.start_date}}</td>
+            <td>{{po.portfolio_name}}</td>
+            <td>{{po.Annual_return}}</td>
+            <td>{{po.Cumulative_return}}</td>
+            <td>{{po.Annual_volatility}}</td>
+            <td>{{po.Winning_day_ratio}}</td>
+            <td>{{po.Sharpe_ratio}}</td>
+            <td>{{po.Calmar_ratio}}</td>
+            <td>{{po.Information_ratio}}</td>
+            <td>{{po.Stability}}</td>
+            <td>{{po.Max_Drawdown}}</td>
+            <td>{{po.Sortino_ratio}}</td>
+            <td>{{po.Skew}}</td>
+            <td>{{po.Kurtosis}}</td>
+            <td>{{po.Tail_Ratio}}</td>
+            <td>{{po.Common_sense_ratio}}</td>
+            <td>{{po.Daily_value_at_risk}}</td>
+            <td>{{po.Alpha}}</td>
+            <td>{{po.Beta}}</td>
+
+
+        {%endfor%}
+        </tbody>
+    </table>
+</div>
+    <script>
+    </script>
+{%endblock%}

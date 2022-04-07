@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%}{%endblock%}</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+<style>
+    .container{
+        width: 1400px;
+        margin: 0 auto;
+        background-color:white;
+
+    }
+    .title{
+        margin-top: 0;
+        height: 40px;
+        background-color: black;
+        
+    }
+    .main{
+        width: 1400px;
+        height: 900px;
+        background-color: white;
+    }
+
+    /* .left{
+        width: 400px;
+        background-color: white;
+        float: left;
+    }
+    .right{
+        float: right;
+        width: 1000px;
+        height: 900px;
+        background-color:whitesmoke;
+        text-align: center;
+        
+    } */
+    .volatility{
+        width: 900px;
+        height: 855px;
+        background-color:white;
+        position: relative;
+        bottom: 870px;
+        right: 100px;
+        text-align: center;
+
+    }
+    /* .login_page{
+        height:40px;
+        align-content: center;
+    } */
+    /* .selection{
+        float: left;
+    } */
+    .UserID{
+        width: 290px;
+        height: 30px;
+
+    }
+    .ticket_name1{
+        width: 300px;
+        height: 35px;
+    }
+    .ticket_name2{
+        width: 300px;
+        height: 35px;
+        /* position: relative; */
+    }
+    .portfolio_name{
+        width: 300px;
+        height: 33px;
+
+    }
+    .ticket_name3{
+        width: 300px;
+        height: 35px;
+
+    }
+    .date{
+        width: 295px;
+        height: 35px;
+    }
+    .ticket_reminder{
+        width: 100px;
+        height: 35px;
+        background-color: skyblue;
+
+    }
+    /* .remindertwo{
+        width: 150px;
+        height: 35px;
+        background-color: grey;
+        position: relative;
+
+    } */
+    .table{
+        margin: 0 auto;
+}
+
+</style>
+<body>
+<div class="container">
+    {%block body%}{% endblock%}
+
+</html>

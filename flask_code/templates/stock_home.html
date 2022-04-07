@@ -1,0 +1,201 @@
+{%extends 'base.html'%}
+{%block title%}stock_home{%endblock%}
+{%block head%}{%endblock%}
+{%block body%}
+<div class="title"><p style="color:aliceblue; font-size: 30px;">Market latest</p></div>
+    <div class="main">
+        <!-- <div class="left"> -->
+            <div class="selection">
+                <form action="http://127.0.0.1:5000/portfolio/" method="post">
+                    <h3 align="left">1 : Select Tickets</h3>
+                    <label>
+                        UserID: 
+                    </label>
+                    <br>
+                    <br>
+                    <input class="UserID" type="text" name='user' id="user">
+                    <br>
+                    <br>
+                    <label class="Ticket_1" style="font-size: 16px">Ticket 1: </label>
+                    <br>
+                    <br>
+                    <select class='ticket_name1' name="ticket1" id="ticket1">
+                        {%for ticket in tickets%}
+                        <option name="ticketname1" style="width: 300px; height: 30px;">{{ticket}}</option>
+                        {%endfor%}
+                    </select>
+                    <br>
+                    <br>
+                    <label class="Ticket_2" style="font-size: 16px">Ticket 2: </label>
+                    <br>
+                    <br>
+                    <label class="reminderone" style="color: brown;">
+                        * Please select a different from ticket 1
+                    </label>
+                    <br>
+                    <br>
+                    <select class='ticket_name2' name="ticket2" id="ticket2"> 
+                        {%for ticket in tickets%}
+                        <option name="ticketname2" id="ticketname2">{{ticket}}</option>
+                        {%endfor%}
+                    </select>
+                    <br>
+                    <br>
+                    <label class="Ticket_3" style="font-size: 16px">Ticket 3: </label>
+                    <br>
+                    <br>
+                    <label class="remindertwo" style="color:brown;">
+                        * Please select a different from ticket 1 and 2
+                    </label> 
+                    <br>
+                    <br>
+                    <select class='ticket_name3' name="ticket3" id="ticket3">
+                        {%for ticket in tickets%}
+                        <option name="ticketname3">{{ticket}}</option>
+                        {%endfor%}
+                    </select>
+                    <br><br>
+                    <h3 class="portfolio_management" style="font-size: 18px">2 : Portfolio selection for diversfication </h3>
+                    <div class="radio" id="radio">
+                        <input type="radio" name="portfolio" id="portfolio" value="Do not diveristy">Do not diveristy
+                        <br>
+                        <input type="radio" name="portfolio" id="portfolio" value="Medium diveristy">Medium diveristy
+                        <br>
+                        <input type="radio" name="portfolio" id="portfolio" value="Optimize">Optimize
+                        <br>
+                        <input type="radio" name="portfolio" id="portfolio" value="Manage risk">Manage risk
+        
+                    </div>
+                    <br>
+                    <label style="font-size: 16px;">
+                        Enter start time for portfolio: 
+                    </label>
+                    <br>
+                    <br>
+                    <input type="date" id="date" name="date" value="2018-03-18" class="date">
+                    <!-- <input type="hidden" id="hidden" name="hidden" value=""> -->
+                    <br>
+                    <br>
+                    <button class="submit" name="search details" value="search details">Search details</button>
+                    <br>
+                    <br>
+                    <label>Portfolio name: </label>
+                    <br>
+                    <br>
+                    <input type="text" class="portfolio_name" id="portfolio_name" name="portfolio_name">
+                    <br>
+                    <br>
+                    <button class='Save portfolio'type="submit" name="Save portfolio" value="Save portfolio">Save portfolio</button>
+
+                    <div class="volatility" name="volatility_radio_sub1" style="float: right;">
+                        <h2>The options for volatility graph</h2>
+                        <input type="radio" name="volatility_radio_sub1",id='volatility_radio_sub1' value="Daily">
+                        Daily
+                        <input type="radio" name="volatility_radio_sub1",id='volatility_radio_sub1' value="Monthly">
+                        Monthly
+                        <br>
+                        <br>
+                        <canvas id="line" width="600" height="300"></canvas>
+                        
+                    </div>
+
+        
+                </form>
+                <!-- <form action="">
+                    <button id="check">see option details</button>
+                </form> -->
+                <!-- <div class="postbutton">
+                    <form action="http://127.0.0.1:5000/post_portfolio/" method="POST">
+                        <button class='postbutton' type="submit">Save portfolio analysis</button>
+                    </form>
+                </div> -->
+            </div>
+
+        <!-- </div>
+        <div class="right">
+            <form action="" method="post">
+                <div class="volatility_radio" name="volatility_radio">
+                    <h3>The options for volatility graph</h3>
+                    <input type="radio" name="volatility_radio_sub1",id='volatility_radio_sub1'>
+                    Daily
+                    <input type="radio" name="volatility_radio_sub1",id='volatility_radio_sub1'>
+                    Monthly
+                    
+                </div>
+            </form> -->
+
+
+
+        </div>
+    </div> 
+</div>
+
+<script>
+        // var datecontrol=document.querySelector('input[type="date"]');
+        // console.log(datecontrol.value)
+        // 表单时间：内容发生改变，失去焦点，或者回车都会触发
+        // $('#user').change(function(e){
+        //     console.log(e.target.value);  //js的方法，如果想用jq；val
+        //     console.log($(e.target).val()); //$() 
+        //     console.log($(this).val()); //this 代表当前元素
+        // })
+        // $('#ticket1').change(function(e){
+        //     console.log($(this).val()); //this 代表当前元素
+        // })
+
+        // $('#ticket2').change(function(e){
+        //     console.log($(this).val()); //this 代表当前元素
+        // })
+
+        // $('#ticket3').change(function(e){
+        //     console.log($(this).val()); //this 代表当前元素
+        // })
+
+        // $('#radio').change(function(e){
+        //     console.log($(this).val()); //this 代表当前元素
+        // })
+
+        // var date=$('#date').val();
+
+        // $.ajax(
+        //     {url:'http://127.0.0.1:5000/post/',
+        //     type:'post',
+        //     data:date
+
+        //     }
+        // )
+        // var date=$('#date').change(function(e){
+        //     $(this).val(); //this 代表当前元素
+        // })
+
+        // $.ajax(
+        //     {
+        //         type:'post',
+        //         datatype:'json',
+        //         url:'http://127.0.0.1:5000/post/',
+        //         data:{'date':date},
+        //         success:function(data){
+        //             $('#date').val()
+        //         },
+        //         error:function(data){
+        //             alert('Cannot find value')
+        //         }
+        //     }
+        // )
+
+
+    $('#user').change(function(e){
+    $(this).val(); //this 代表当前元素
+    })
+
+
+
+
+
+    
+
+        
+
+    
+</script>
+{%endblock%}
