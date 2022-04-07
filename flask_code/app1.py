@@ -10,7 +10,6 @@ from matplotlib.figure import Figure
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 import pandas as pd
 import json
-from pymysql import NULL
 import requests
 import math
 import csv
