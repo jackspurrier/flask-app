@@ -1,5 +1,5 @@
 flask==1.0.2
-base64==3.7.2
+base64
 matplotlib==2.2.2
 pandas==1.4.2
 json==0.9.5
