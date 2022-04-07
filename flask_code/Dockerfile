@@ -5,4 +5,4 @@ WORKDIR /flask-app/flask_code
 RUN pip install -r requirements.txt
 EXPOSE 8080
 ENTRYPOINT ["python"]
-CMD ["flask_code/app1.py"]
+CMD ["app1.py"]
