@@ -8,6 +8,7 @@ from importlib_metadata import method_cache
 import matplotlib.pyplot as plt
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+from pymysql import NULL
 import pandas as pd
 import json
 import requests
