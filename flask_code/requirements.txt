@@ -6,7 +6,7 @@ flask-sqlalchemy==2.5.1
 empyrial==1.9.1
 DateTime==4.4
 ipython==7.16.3
-importlib-metadata==4.11.3
+importlib-metadata==4.8.3
 requests==2.27.1
 QuantStats==0.0.50
 flask-migrate==3.1.0
